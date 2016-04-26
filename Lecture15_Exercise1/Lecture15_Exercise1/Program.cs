@@ -14,7 +14,7 @@ namespace Lecture15_Exercise1
                 var input = Console.ReadLine() ?? "";
 
                 if (input.ToLower() == "start")
-                    stopWatch.StartTime();
+                    stopWatch.Start();
             }
         }
     }

@@ -6,15 +6,28 @@ namespace Lecture15_Exercise1
     {
         static void Main()
         {
-            while (true)
+            var input = "";
+
+            while (input != "quit")
             {
                 var stopWatch = new StopWatch();
 
-                Console.Write("Enter Start/Stop to control Stopwatch: ");
-                var input = Console.ReadLine() ?? "";
+                Console.Write("Enter Start/Stop to control Stopwatch 'Quit' to exit: ");
+                input = Console.ReadLine() ?? "";
 
-                if (input.ToLower() == "start")
-                    stopWatch.Start();
+                Console.Clear();
+
+                switch (input.ToLower())
+                {
+                    case "start":
+                        stopWatch.Start();
+                        break;
+                    case "stop":
+                        Console.WriteLine($"Duration: {stopWatch.Stop().Seconds}");
+                        break;
+                    case "quit":
+                        break;
+                }
             }
         }
     }

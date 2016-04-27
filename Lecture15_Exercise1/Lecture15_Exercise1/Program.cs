@@ -30,7 +30,7 @@ namespace Lecture15_Exercise1
                         stopWatch.Start();
                         break;
                     case "stop":
-                        Console.WriteLine($"Duration: {stopWatch.Stop().Seconds}");
+                        Console.WriteLine($"Duration: {stopWatch.Stop():G}");
                         break;
                     case "quit":
                         break;

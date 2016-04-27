@@ -1,5 +1,12 @@
 ﻿using System;
 
+/*
+ * The issues
+ * 1) Duration calculation
+ * 2) Duration display
+ * 3) Exception throwing
+ */
+
 namespace Lecture15_Exercise1
 {
     class Program

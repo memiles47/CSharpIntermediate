@@ -4,7 +4,7 @@
  * The issues
  * 1) Duration calculation: Fixed (I was instantiating a new stopwatch each time through the while loop
  * 2) Duration display: Fixed (Google is your friend "C# TimeSpan format strings"
- * 3) Exception throwing: Fixed when stopwatch instantiation was move above while loop.
+ * 3) Exception throwing: Fixed when stopwatch instantiation was move above while loop and added Try Catch.
  */
 
 namespace Lecture15_Exercise1
@@ -29,7 +29,7 @@ namespace Lecture15_Exercise1
                         stopWatch.Start();
                         break;
                     case "stop":
-                        Console.WriteLine($"Duration: {stopWatch.Stop():g}\n");
+                        Console.WriteLine($"Duration: {stopWatch.Stop()}\n");
                         break;
                     case "quit":
                         break;

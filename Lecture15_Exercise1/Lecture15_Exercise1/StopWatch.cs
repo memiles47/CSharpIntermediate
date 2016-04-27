@@ -4,13 +4,9 @@ namespace Lecture15_Exercise1
 {
     public class StopWatch
     {
-
         public bool TimerRunning { get; private set; }
         public DateTime StartTime { get; private set; }
         public DateTime StopTime { get; private set; }
-        public InvalidOperationException TimerIsRunningException { get; } = 
-            new InvalidOperationException("Timer is currently running");
-
 
         public void Start()
         {
@@ -23,13 +19,12 @@ namespace Lecture15_Exercise1
                     TimerRunning = true;
                 }
                 else
-                    throw TimerIsRunningException;
+                    throw new InvalidOperationException("Timer is currently running");
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                Console.WriteLine($"Exception: {TimerIsRunningException.Message}");
+                Console.WriteLine($"Exception: {e.Message}");
             }
-            
         }
 
         public TimeSpan Stop()

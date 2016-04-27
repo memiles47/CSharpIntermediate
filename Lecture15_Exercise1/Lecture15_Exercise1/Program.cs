@@ -2,9 +2,9 @@
 
 /*
  * The issues
- * 1) Duration calculation
- * 2) Duration display
- * 3) Exception throwing
+ * 1) Duration calculation: Fixed (I was instantiating a new stopwatch each time through the while loop
+ * 2) Duration display: Fixed (Google is your friend "C# TimeSpan format strings"
+ * 3) Exception throwing: Fixed when stopwatch instantiation was move above while loop.
  */
 
 namespace Lecture15_Exercise1
@@ -14,12 +14,11 @@ namespace Lecture15_Exercise1
         static void Main()
         {
             var input = "";
+            var stopWatch = new StopWatch();
 
             while (input != "quit")
             {
-                var stopWatch = new StopWatch();
-
-                Console.Write("Enter Start/Stop to control Stopwatch 'Quit' to exit: ");
+                Console.Write("Enter Start/Stop to control Stopwatch 'Quit': ");
                 input = Console.ReadLine() ?? "";
 
                 Console.Clear();
@@ -30,7 +29,7 @@ namespace Lecture15_Exercise1
                         stopWatch.Start();
                         break;
                     case "stop":
-                        Console.WriteLine($"Duration: {stopWatch.Stop():G}");
+                        Console.WriteLine($"Duration: {stopWatch.Stop():g}\n");
                         break;
                     case "quit":
                         break;

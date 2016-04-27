@@ -5,16 +5,17 @@ namespace Lecture15_Exercise1
     public class StopWatch
     {
 
-        public bool TimerRunning { get; private set; } = false;
+        public bool TimerRunning { get; private set; }
         public DateTime StartTime { get; private set; }
         public DateTime StopTime { get; private set; }
+        public InvalidOperationException TimerIsRunningException { get; } = new InvalidOperationException("Timer is currently running");
+
 
         public void Start()
         {
             if(TimerRunning)
             {
-                InvalidOperationException timerIsRunning = new InvalidOperationException("Timer currently running");
-                throw timerIsRunning;
+                throw TimerIsRunningException;
             }
             //Start Stopwatch code
             Console.WriteLine("Stopwatch running");
@@ -29,7 +30,7 @@ namespace Lecture15_Exercise1
             TimerRunning = false;
             StopTime = DateTime.Now;
 
-            return this.StopTime - this.StartTime;
+            return StopTime - StartTime;
         }
     }
 }

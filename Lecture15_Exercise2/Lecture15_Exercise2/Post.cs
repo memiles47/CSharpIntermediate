@@ -14,5 +14,20 @@ namespace Lecture15_Exercise2
             Votes = 0;
             Title = title;
         }
+
+        public void CreatePost()
+        {
+            //Create a post with Title, DateCreated and the post itself the description
+        }
+
+        public void UpVote()
+        {
+            //Up vote a post
+        }
+
+        public void DownVote()
+        {
+            //Down vote a post
+        }
     }
 }

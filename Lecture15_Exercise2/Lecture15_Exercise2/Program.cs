@@ -1,4 +1,6 @@
-﻿namespace Lecture15_Exercise2
+﻿using System;
+
+namespace Lecture15_Exercise2
 {
     /*
      * Design a class called Post. This class models a StackOverflow post. It should have properties
@@ -18,6 +20,11 @@
     {
         static void Main()
         {
+            Console.Write("Create a post or View a post, press \"C\" or \"V\": ");
+            var input = Console.Read();
+
+            Console.WriteLine($"ASCII for character entered: {input}");
+
 
         }
     }

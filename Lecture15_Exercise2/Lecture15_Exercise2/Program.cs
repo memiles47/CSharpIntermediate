@@ -24,8 +24,6 @@ namespace Lecture15_Exercise2
             var input = Console.Read();
 
             Console.WriteLine($"ASCII for character entered: {input}");
-
-
         }
     }
 }

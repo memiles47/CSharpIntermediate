@@ -13,6 +13,7 @@ namespace Lecture15_Exercise2
         {
             Votes = 0;
             Title = title;
+            DateCreated = DateTime.Now;
         }
 
         public void CreatePost()

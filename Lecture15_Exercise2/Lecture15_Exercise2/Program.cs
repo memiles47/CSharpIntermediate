@@ -20,10 +20,25 @@ namespace Lecture15_Exercise2
     {
         static void Main()
         {
-            Console.Write("Create a post or View a post, press \"C\" or \"V\": ");
-            var input = Console.Read();
+            Console.Write("Create post or View post, press \"C\" or \"V\": ");
+            var input = Console.ReadLine()?.ToLower() ?? "";
 
-            Console.WriteLine($"ASCII for character entered: {input}");
+            if (input == "c")
+            {
+                var title = "";
+
+                while (title == "")
+                {
+                    Console.Clear();
+                    Console.Write("Enter the Title: ");
+                    title = Console.ReadLine()?.ToUpper() ?? "";
+                }
+
+                var newPost = new Post(title);
+                Console.WriteLine($"Creation Date: {newPost.DateCreated}");
+                Console.WriteLine("\nEnter Post: \n");
+                newPost.Description = Console.ReadLine();
+            }
         }
     }
 }

@@ -35,8 +35,10 @@ namespace Lecture15_Exercise2
                 }
 
                 var newPost = new Post(title);
+                Console.Clear();
+                Console.WriteLine($"Title: {newPost.Title}");
                 Console.WriteLine($"Creation Date: {newPost.DateCreated}");
-                Console.WriteLine("\nEnter Post: \n");
+                Console.WriteLine("\nEnter Post: ");
                 newPost.Description = Console.ReadLine();
             }
         }

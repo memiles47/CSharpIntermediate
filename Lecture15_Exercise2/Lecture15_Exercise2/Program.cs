@@ -13,7 +13,9 @@ namespace Lecture15_Exercise2
      * number and this is how we create bugs in our programs. The class should always protect its
      * state and hide its implementation detail.
      * 
-     * Issues: None
+     * Issues:
+     * 1) Correct location of created Post. Currently the scope of the created object is too limited
+     * 2)
      */
 
     class Program

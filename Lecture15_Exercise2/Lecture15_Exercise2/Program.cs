@@ -25,24 +25,7 @@ namespace Lecture15_Exercise2
             Console.Write("Create post or View post, press \"C\" or \"V\": ");
             var input = Console.ReadLine()?.ToLower() ?? "";
 
-            if (input == "c")
-            {
-                var title = "";
-
-                while (title == "")
-                {
-                    Console.Clear();
-                    Console.Write("Enter the Title: ");
-                    title = Console.ReadLine()?.ToUpper() ?? "";
-                }
-
-                var newPost = new Post(title);
-                Console.Clear();
-                Console.WriteLine($"Title: {newPost.Title}");
-                Console.WriteLine($"Creation Date: {newPost.DateCreated}");
-                Console.WriteLine("\nEnter Post: ");
-                newPost.Description = Console.ReadLine();
-            }
+            Console.WriteLine($"Input: {input}");
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Lecture15_Exercise2
 {
@@ -23,6 +24,10 @@ namespace Lecture15_Exercise2
         static void Main()
         {
             var input = "";
+            var postList = new List<Post>();
+            var viewPost = new PostView();
+            var vote = new Votes();
+
 
             while (input != "quit")
             {
@@ -30,14 +35,27 @@ namespace Lecture15_Exercise2
                 Console.Write("Create post or View post, press \"C\" or \"V\" or \"Quit\": ");
                 input = Console.ReadLine()?.ToLower() ?? "";
 
-                switch (input)
+                if (input == "c")
                 {
-                    case "c":
-                        Post.CreatePost();
-                        break;
-                    case "v":
-                        //Test
-                        break;
+                    Console.Clear();
+                    Console.Write("Enter Post Title: ");
+                    var title = Console.ReadLine()?.ToUpper();
+
+                    Console.Write("Enter Post Description: ");
+                    var description = Console.ReadLine();
+
+                    postList.Add(new Post());
+                    postList[0].CreatePost(title, description);
+                }
+
+                if (input == "v")
+                {
+                    viewPost.ViewPost(postList[0]);
+                }
+
+                if (input == "u" || input == "d")
+                {
+                    vote.Voting(postList[0], input);
                 }
             }
         }

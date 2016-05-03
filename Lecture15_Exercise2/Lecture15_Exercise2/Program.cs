@@ -22,10 +22,24 @@ namespace Lecture15_Exercise2
     {
         static void Main()
         {
-            Console.Write("Create post or View post, press \"C\" or \"V\": ");
-            var input = Console.ReadLine()?.ToLower() ?? "";
+            var input = "";
 
-            Console.WriteLine($"Input: {input}");
+            while (input != "quit")
+            {
+                Console.Clear();
+                Console.Write("Create post or View post, press \"C\" or \"V\" or \"Quit\": ");
+                input = Console.ReadLine()?.ToLower() ?? "";
+
+                switch (input)
+                {
+                    case "c":
+                        Post.CreatePost();
+                        break;
+                    case "v":
+                        //Test
+                        break;
+                }
+            }
         }
     }
 }

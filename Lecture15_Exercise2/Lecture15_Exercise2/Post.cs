@@ -4,10 +4,10 @@ namespace Lecture15_Exercise2
 {
     public class Post
     {
-        public int Votes { get; set; }
-        public string Title { get; set; }
-        public DateTime DateCreated { get; set; }
-        public string Description { get; set; }
+        public static int Votes { get; set; }
+        public static string Title { get; set; }
+        public static DateTime DateCreated { get; set; }
+        public static string Description { get; set; }
 
         public Post(string title)
         {
@@ -16,19 +16,19 @@ namespace Lecture15_Exercise2
             DateCreated = DateTime.Now;
         }
 
-        public void CreatePost()
+        public static void CreatePost()
         {
             //Create a post with Title, DateCreated and the post itself the description
-        }
+            Console.Write("Enter a Title: ");
+            var input = Console.ReadLine()?.ToUpper() ?? "";
 
-        public void UpVote()
-        {
-            //Up vote a post
-        }
+            if (input == "") return;
 
-        public void DownVote()
-        {
-            //Down vote a post
+            var newPost = new Post(input);
+
+            Console.Clear();
+            Console.WriteLine($"Post Title: {Title}\nDate Created: {DateCreated}\n\nEnterPost: \n");
+            Description = Console.ReadLine();
         }
     }
 }

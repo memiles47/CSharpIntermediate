@@ -14,9 +14,7 @@ namespace Lecture15_Exercise2
      * number and this is how we create bugs in our programs. The class should always protect its
      * state and hide its implementation detail.
      * 
-     * Issues:
-     * 1) Correct location of created Post. Currently the scope of the created object is too limited
-     * 2)
+     * Issues: None
      */
 
     class Program
@@ -28,34 +26,36 @@ namespace Lecture15_Exercise2
             var viewPost = new PostView();
             var vote = new Votes();
 
-
             while (input != "quit")
             {
                 Console.Clear();
-                Console.Write("Create post or View post, press \"C\" or \"V\" or \"Quit\": ");
+
+                Console.WriteLine("Press C or V to Create or view the post, U or D to Up or Down vote");
+                Console.Write("Or type Quit to end the application: ");
                 input = Console.ReadLine()?.ToLower() ?? "";
 
-                if (input == "c")
+                switch (input)
                 {
-                    Console.Clear();
-                    Console.Write("Enter Post Title: ");
-                    var title = Console.ReadLine()?.ToUpper();
+                    case "c":
+                        Console.Clear();
+                        Console.Write("Enter Post Title: ");
+                        var title = Console.ReadLine()?.ToUpper();
 
-                    Console.Write("Enter Post Description: ");
-                    var description = Console.ReadLine();
+                        Console.Write("Enter Post Description: ");
+                        var description = Console.ReadLine();
 
-                    postList.Add(new Post());
-                    postList[0].CreatePost(title, description);
-                }
+                        postList.Add(new Post());
+                        postList[0].CreatePost(title, description);
+                        break;
 
-                if (input == "v")
-                {
-                    viewPost.ViewPost(postList[0]);
-                }
+                    case "v":
+                        viewPost.ViewPost(postList[0]);
+                        break;
 
-                if (input == "u" || input == "d")
-                {
-                    vote.Voting(postList[0], input);
+                    case "u":
+                    case "d":
+                        vote.Voting(postList[0], input);
+                        break;
                 }
             }
         }

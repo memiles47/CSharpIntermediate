@@ -11,6 +11,8 @@ namespace Lecture15_Exercise2
             Console.WriteLine($"Description: {post.Description}");
             Console.WriteLine($"Creation Date: {post.DateCreated:d}");
             Console.WriteLine($"Number of votes: {post.Votes}");
+            Console.Write("\n\nPress any key to continue...");
+            Console.ReadKey();
         }
     }
 }

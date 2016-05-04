@@ -17,7 +17,6 @@ namespace Lecture15_Exercise2
 
         public void CreatePost(string title, string description)
         {
-            //Create a post with Title, DateCreated and the post itself the description
             Title = title;
             Description = description;
         }

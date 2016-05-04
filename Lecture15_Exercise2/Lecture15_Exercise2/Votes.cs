@@ -1,13 +1,17 @@
+using System.Collections.Generic;
+
 namespace Lecture15_Exercise2
 {
     public class Votes
     {
-        public void Voting(Post post, string vote)
+        public void PostVoting(List<Post> postList , string vote)
         {
+            var index = postList.Count - 1;
+
             if (vote == "u")
-                post.Votes ++;
+                postList[index].Votes ++;
             else
-                post.Votes --;
+                postList[index].Votes --;
         }
     }
 }

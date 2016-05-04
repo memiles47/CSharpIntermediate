@@ -25,6 +25,7 @@ namespace Lecture15_Exercise2
             var postList = new List<Post>();
             var viewPost = new PostView();
             var vote = new Votes();
+            var post = new Post();
 
             while (input != "quit")
             {
@@ -45,16 +46,16 @@ namespace Lecture15_Exercise2
                         var description = Console.ReadLine();
 
                         postList.Add(new Post());
-                        postList[0].CreatePost(title, description);
+                        post.CreatePost(postList, title, description);
                         break;
 
                     case "v":
-                        viewPost.ViewPost(postList[0]);
+                        viewPost.PostViewer(postList);
                         break;
 
                     case "u":
                     case "d":
-                        vote.Voting(postList[0], input);
+                        vote.PostVoting(postList, input);
                         break;
                 }
             }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Lecture15_Exercise2
 {
@@ -15,10 +16,12 @@ namespace Lecture15_Exercise2
             DateCreated = DateTime.Now;
         }
 
-        public void CreatePost(string title, string description)
+        public void CreatePost(List<Post> postList , string title, string description)
         {
-            Title = title;
-            Description = description;
+            var index = postList.Count - 1;
+
+            postList[index].Title = title;
+            postList[index].Description = description;
         }
     }
 }

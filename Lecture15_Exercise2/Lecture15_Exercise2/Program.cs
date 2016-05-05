@@ -19,7 +19,7 @@ namespace Lecture15_Exercise2
 
     class Program
     {
-        static void Main()
+        private static void Main()
         {
             var input = "";
             var postList = new List<Post>();

@@ -30,7 +30,7 @@ namespace Lecture15_Exercise2
             }
         }
 
-        public void Viewer(List<Post> postList, int index)
+        private void Viewer(List<Post> postList, int index)
         {
             try
             {

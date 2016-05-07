@@ -1,7 +1,13 @@
-﻿namespace StackExercise
+﻿using System.Collections;
+
+namespace StackExercise
 {
     class Stack
     {
+        public Stack()
+        {
+            var list = new ArrayList();
+        }
         public void Push(object obj)
         {
             //Push object to the stack

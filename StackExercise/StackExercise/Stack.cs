@@ -4,13 +4,16 @@ namespace StackExercise
 {
     class Stack
     {
+        public ArrayList List { get; set; }
+
         public Stack()
         {
-            var list = new ArrayList();
+            List = new ArrayList();
         }
+
         public void Push(object obj)
         {
-            //Push object to the stack
+            List.Add(obj);
         }
 
         public object Pop()

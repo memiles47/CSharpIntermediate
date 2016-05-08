@@ -5,6 +5,7 @@ namespace StackExercise
     class Stack
     {
         public ArrayList List { get; set; }
+        public object PoppedObj { get; set; }
 
         public Stack()
         {
@@ -18,13 +19,14 @@ namespace StackExercise
 
         public object Pop()
         {
-            //Pop object from the stack
-            return new object();
+            PoppedObj = List[List.Count - 1];
+            List.RemoveAt(List.Count - 1);
+            return PoppedObj;
         }
 
         public void Clear()
         {
-            //Clear the stack
+            List.Clear();
         }
     }
 }

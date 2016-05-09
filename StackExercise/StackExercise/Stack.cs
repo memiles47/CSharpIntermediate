@@ -3,10 +3,10 @@ using System.Collections;
 
 namespace StackExercise
 {
-    class Stack
+    internal class Stack
     {
-        public ArrayList List { get; set; }
-        public object PoppedObj { get; set; }
+        private ArrayList List { get; }
+        private object PoppedObj { get; set; }
 
         public Stack()
         {

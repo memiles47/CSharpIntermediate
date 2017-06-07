@@ -1,0 +1,6 @@
+namespace Classes
+{
+    class Order
+    {
+    }
+}

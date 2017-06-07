@@ -33,6 +33,7 @@ namespace Lecture15_Exercise1
 
                 Console.Clear();
 
+                //I like better than if/then statments (easier to read)
                 switch (input.ToLower())
                 {
                     case "start":

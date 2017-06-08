@@ -11,6 +11,7 @@ namespace Methods
             UsePoints();
         }
 
+        //Demonstrates the use of keyword out in method parameters
         static void UseTryParseOut()
         {
             try
@@ -30,6 +31,7 @@ namespace Methods
                 Console.WriteLine("Conversion Failed");
         }
 
+        //Demonstrates the use of params for multiple parameters via list<t>
         static void UseParams()
         {
             var calculator = new Calculator();
@@ -39,6 +41,7 @@ namespace Methods
             Console.WriteLine(calculator.Add(new int[] { 1, 2, 3, 4, 5 }));
         }
 
+        //Demonstrates the use of multiple overloads for a Method
         static void UsePoints()
         {
             try

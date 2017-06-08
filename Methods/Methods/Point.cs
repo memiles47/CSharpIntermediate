@@ -1,5 +1,6 @@
 ﻿namespace Methods
 {
+    //Multiple overload demonstration
     class Point
     {
         public int X;

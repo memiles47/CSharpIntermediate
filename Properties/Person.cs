@@ -21,7 +21,7 @@ namespace Properties
             get
             {
                 var timeSpan = DateTime.Today - Birthdate;
-                var years = Convert.ToInt32(Math.Floor(timeSpan.TotalDays / 365));
+                var years = Convert.ToInt32(Math.Floor(timeSpan.TotalDays / 365.24));
                 return years;
             }
         }

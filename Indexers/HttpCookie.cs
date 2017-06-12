@@ -18,6 +18,7 @@ namespace Indexers
         public string this[string key]
         {
             //Expression body can be used here
+            //it is also a form I have never seen befor
             get { return _dictionary[key]; }
             set { _dictionary[key] = value; }
         }

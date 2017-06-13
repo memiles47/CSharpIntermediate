@@ -19,6 +19,7 @@ namespace StopWatch
             }
             else
             {
+                //Throw exception when stopwatch is running and start is selected
                 throw new InvalidOperationException();
             }
         }

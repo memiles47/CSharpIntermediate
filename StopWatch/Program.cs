@@ -17,6 +17,7 @@ namespace StopWatch
                 switch (selection)
                 {
                     case "start":
+                        //Catch the thrown exception when running
                         try
                         {
                             stopWatch.Start();

@@ -1,4 +1,7 @@
-﻿namespace AccessModifiers
+﻿using System;
+using Amazon;
+
+namespace AccessModifiers
 {
     class Program
     {
@@ -16,6 +19,16 @@
             var goldCustomer = new GoldCustomer();
             goldCustomer.OfferVouchar();
 
-            #endregion        }
+            #endregion
+
+            #region internal method modifier demonstration
+
+            //Cannot access Amazon.RateCalculator() because of its internal protection.
+            var customer2 = new Customer();
+            var customer3 = new Amazon.Customer();
+            var rateCalculator = new Amazon.RateCalculator();
+
+            #endregion
+        }
     }
 }

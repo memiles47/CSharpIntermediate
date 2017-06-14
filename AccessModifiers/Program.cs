@@ -1,15 +1,21 @@
-﻿using System;
-
-namespace AccessModifiers
+﻿namespace AccessModifiers
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            var person = new Person();
+            #region Private method modifier demonstration
 
-            person.SetBirthdate(new DateTime(1962, 8, 10));
-            Console.WriteLine(person.GetBirthdate());
-        }
+            var customer = new Customer();
+            customer.Promote();
+
+            #endregion
+
+            #region Protected method modifier demonstration
+
+            var goldCustomer = new GoldCustomer();
+            goldCustomer.OfferVouchar();
+
+            #endregion        }
     }
 }

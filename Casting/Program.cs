@@ -4,6 +4,7 @@
     {
         static void Main()
         {
+            //upcasging
             var shape = new Shape();
         }
     }

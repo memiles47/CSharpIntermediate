@@ -4,7 +4,6 @@
     {
         static void Main()
         {
-            //upcasting
             var shape = new Shape();
         }
     }

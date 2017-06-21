@@ -9,8 +9,6 @@
             Shape shape = text;
         
             //Look at what is availble in shape. -vs- text.
-
-
         }
     }
 }

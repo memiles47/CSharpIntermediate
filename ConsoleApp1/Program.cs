@@ -5,10 +5,9 @@
         static void Main()
         {
             /*
-             * This is where I will put the information needed
-             * for what is happening with each of the solutions
-             * I create for each of the sections/videos in my Udemy
-             * classes.
+             * The Casting solution
+             * This solution demonstrates up and down casting of objects and how this can
+             * filter or limit the items accessable to the cast object
              */
         }
     }

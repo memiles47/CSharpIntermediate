@@ -10,7 +10,6 @@
              * filter or limit the items accessable to the cast object
              * 
              * Inheritance
-             * I am now still in love with Angie
              */
         }
     }

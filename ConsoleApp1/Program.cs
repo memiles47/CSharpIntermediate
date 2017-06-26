@@ -10,6 +10,7 @@
              * filter or limit the items accessable to the cast object
              * 
              * Inheritance
+             * 
              */
         }
     }
